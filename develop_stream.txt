@@ -1,0 +1,27 @@
+開発の流れ
+Step 1: feature/ui-setup
+streamlitを使ってシンプルな画面を作る
+音声ファイルのアップロード機能をつける(.wav対応)
+
+Step 2: feature/audio-processing
+アップロードした音声をlibrosaで読み込む
+波形グラフをStreamlitに表示
+ピッチ, 音量, 話速, 無音区間, MFCCなどの特徴量を抽出
+features.pyに機能を分離して整理
+
+Step 3: feature/fatigue-score
+ルールベースでスコアを算出する処理をscoring.pyに記述
+重み付け, スコア合計, 疲労レベルに応じたコメントなど
+
+Step 4: feature/result-display
+スコアとアドバイスを画面に表示
+
+Step 5: fix/* or refactor/*
+テストして気づいたバグを直す
+コード整理や共通化など
+
+Step 6：release/initial-version
+requirements.txt を整理
+Streamlit Cloudで動くことを確認
+README.md
+
